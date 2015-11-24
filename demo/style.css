@@ -1,0 +1,24 @@
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.tab-pane {
+  padding-top: 20px;
+}
+
+/* Remove :hover style. Doesn't play well with 
+   moving DOM from under mouse when in :hover */
+.nav-tabs > li:hover > a {
+  background: transparent;
+  border-color: transparent;
+}
+
+
+.nav-tabs > li.hover > a {
+  background: #eeeeee;
+}
+
+.nav-tabs > li.dragging {
+  opacity: 0.5;
+}
+
