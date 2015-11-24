@@ -14,7 +14,7 @@ app.directive('sortableTab', function () {
             });
 
             var dragMove = function (e) {
-                var orig = e, touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
+                var orig = e.originalEvent, touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
                 var touch = e.touches ? e.touches[0] : e;
                 if (dragging) {
                     placeholder.element.css({ 'left': touchPoints[0].pageX - offset.x, 'top': touchPoints[0].pageY - offset.y });
